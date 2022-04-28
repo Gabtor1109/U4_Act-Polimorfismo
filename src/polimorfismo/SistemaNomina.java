@@ -34,6 +34,11 @@ public class SistemaNomina {
         empleado[0] = empleadoAsalariado;
         empleado[1] = empleadoBaseMasComision;
         empleado[2] = empleadoPorComision;
+        empleado[3] = empleadoPorHoras;
+        
+        
+        System.out.println(empleado);
+        
         
        }
     }
