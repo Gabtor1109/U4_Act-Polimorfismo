@@ -36,8 +36,10 @@ public class SistemaNomina {
         empleado[2] = empleadoPorComision;
         empleado[3] = empleadoPorHoras;
         
+        for (int i = 0; i < empleado.length; i++) {
+            System.out.printf("%s\n%s: $%,.2f\n\n",empleado[i],"Ingresos",empleado[i].ingresos());
+        }
         
-        System.out.println(empleado);
         
         
        }
