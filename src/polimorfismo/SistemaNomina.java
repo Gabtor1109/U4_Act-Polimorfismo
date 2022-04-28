@@ -18,12 +18,22 @@ public class SistemaNomina {
      */
     public static void main(String[] args) {
          //Instanciar objetos
-        EmpleadoAsalariado empleadoAsalariado = new EmpleadoAsalariado("Gabriel", "Torres", "111", 1500);
-        EmpleadoBaseMasComision empleadoBaseMasComision = new EmpleadoBaseMasComision("Gabriel", "Marquez", "125766", 200, 0.2, 1500);
-        EmpleadoPorComision empleadoPorComision =  new EmpleadoPorComision("Gabriel", "Torres", "12345", 200, 0.2);
-        EmpleadoPorHoras empleadoPorHoras =  new EmpleadoPorHoras("Gabriel", "Torres", "12540", 200, 12);
+        EmpleadoAsalariado empleadoAsalariado = new EmpleadoAsalariado("Gabriel", " Torres", "111", 1500);
+        EmpleadoBaseMasComision empleadoBaseMasComision = new EmpleadoBaseMasComision("Gabriel", " Torres", "125766", 200, 0.2, 1500);
+        EmpleadoPorComision empleadoPorComision =  new EmpleadoPorComision("Gabriel", " Torres", "12345", 200, 0.2);
+        EmpleadoPorHoras empleadoPorHoras =  new EmpleadoPorHoras("Gabriel", " Torres", "12540", 200, 12);
+        
+        System.out.println("Se procesa Empleados por separado");
+        System.out.printf("%s\n%s: $%,.2f\n\n",empleadoAsalariado,"Ingresos",empleadoAsalariado.ingresos());
+        System.out.printf("%s\n%s: $%,.2f\n\n",empleadoBaseMasComision,"Ingresos",empleadoBaseMasComision.ingresos());
+        System.out.printf("%s\n%s: $%,.2f\n\n",empleadoPorComision,"Ingresos",empleadoPorComision.ingresos());
+        System.out.printf("%s\n%s: $%,.2f\n\n",empleadoPorHoras,"Ingresos", empleadoPorHoras.ingresos());
+        
         
         Empleado []empleado = new Empleado[4];
+        empleado[0] = empleadoAsalariado;
+        empleado[1] = empleadoBaseMasComision;
+        empleado[2] = empleadoPorComision;
         
        }
     }
