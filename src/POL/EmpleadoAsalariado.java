@@ -1,6 +1,7 @@
 package POL;
 
-//import .*;
+import POL.*;
+import polimorfismo.*;
 
 /*
  se aplica herencia en la cual la clase hija es "EmpleadoAsalariado" y clase 
@@ -34,17 +35,21 @@ public class EmpleadoAsalariado extends Empleado {
         return salarioSemanal;
     }
     
-    // se sobreescriben los metodos de ingreso "metodo abstracto" para calcular los ingresos
     @Override
+    public double obtenerMontoPago(){
+        return obtenerSalarioSemanal();
+    }
+    // se sobreescriben los metodos de ingreso "metodo abstracto" para calcular los ingresos
+   /* @Override
     public double ingresos(){
         return obtenerSalarioSemanal();
     
     }
+    */
     @Override
     public String toString(){
         return String.format("Empleado asalariado:  %s\n%s: $%,.2f",super.toString(),"Salario semanal",obtenerSalarioSemanal());
-    }
-    
+    }   
     
     
     

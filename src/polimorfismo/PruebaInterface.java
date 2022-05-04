@@ -11,13 +11,15 @@ import POL.*;
  *
  * @author Juana García
  */
-public class SistemaNomina {
+public class PruebaInterface {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         //Instanciar objetos
+        
+        /*
+        //Instanciar objetos
         EmpleadoAsalariado empleadoAsalariado = new EmpleadoAsalariado("Gabriel", " Torres", "111", 1500);
         EmpleadoBaseMasComision empleadoBaseMasComision = new EmpleadoBaseMasComision("Gabriel", " Torres", "125766", 200, 0.2, 1500);
         EmpleadoPorComision empleadoPorComision =  new EmpleadoPorComision("Gabriel", " Torres", "12345", 200, 0.2);
@@ -56,6 +58,29 @@ public class SistemaNomina {
         for (int j = 0; j < empleado.length; j++) {
             System.out.printf("El empleado %d es un %s\n",j,empleado[j].getClass().getName());            
         }
+        */
+        
+        
+        // Uso de interface PORPAGAR
+        PorPagar[] objetosPorPagar = new PorPagar[4];
+        
+        // se llena el arreglo con objetos que implementan la interfaz "PorPagar"
+        objetosPorPagar[0] = new Factura("0123", "silla",2,375.00);
+        objetosPorPagar[1] = new Factura("01234", "escritorio",3,79.55);
+        
+        objetosPorPagar[2] = new EmpleadoAsalariado("Gabriel", "Torres", "1111", 800.00);
+        objetosPorPagar[2] = new EmpleadoAsalariado("Josue", "Marquez", "2222", 1800.00);
+        
+        System.out.println("Facturas y Empleados procesados en forma polimorfica \n");
+        // se procesan de forma generica cada elemento del arreglo "objetosPorPagar"
+        
+        for (PorPagar porPagarActual : objetosPorPagar) {
+            // se imprime por Pahar Actiañ y su monto de pago apropiado
+            
+            System.out.printf("%s \n%s: $%,.2f\n\n",porPagarActual.toString(),"Pago vencido",porPagarActual.obtenerMontoPago());
+            
+        }
+        
         
        }
     }
