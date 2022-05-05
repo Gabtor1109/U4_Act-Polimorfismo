@@ -36,8 +36,9 @@ public double obtenerTarifaComision() {
     public double obtenerVentasBrutas() {
         return ventasBrutas;
     }
+    
     @Override
-public double ingresos() {
+    public double ingresos() {
         return obtenerTarifaComision()*obtenerVentasBrutas();
     }
    
